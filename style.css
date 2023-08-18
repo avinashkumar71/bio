@@ -1,0 +1,125 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    background-color: #a1cca7;
+}
+.container{
+    max-width: 900px;
+    margin: 0 auto;
+    margin-top: 10px;
+}
+.top-section{
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+}
+.name h1{
+    font-size: 40px;
+    position: relative;
+}
+.name h1::before{
+    content: "";
+    position: absolute;
+    top: 0%;
+    left: 0%;
+    width: 100%;
+    height: 100%;
+    border-left: 1px solid black;
+    background-color: #a1cca7;
+    animation: move 4s steps(25) infinite;
+}
+@keyframes move{
+    40%, 60%{
+        left: 100%;
+    }
+    100%{
+        left: 0%;
+    }
+}
+.name h4{
+    text-align: end;
+}
+
+.sub-container{
+    width: 300px;
+    height: 350px;
+    border-radius: 50%;
+    overflow: hidden;
+}
+.card{
+    width: 100%;
+    height: 100%;
+    position: relative;
+    transition: 2s;
+    transform-style: preserve-3d;
+}
+.sub-container > .card:hover{
+    cursor: pointer;
+    transform: rotateY(180deg);
+}
+.img-container, .text{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+}
+.text{
+    transform: rotateY(180deg);
+    backface-visibility: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    background-color: #16171f;
+}
+.img-container{
+    background-image: url(photos/raman.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    backface-visibility: hidden;
+}
+.text a{
+    text-decoration: none;
+    color: white;
+}
+.text span{
+    font-size: 20px;
+}
+.heading{
+    margin-top: 40px;
+    font-size: 50px;
+    text-transform: uppercase;
+}
+.para{
+    margin-top: 20px;
+    text-align: justify;
+    line-height: 30px;
+}
+.bio h1{
+    margin-top: 40px;
+    font-size: 25px;
+    text-transform: uppercase;
+}
+.bio ul{
+    line-height: 30px;
+    padding-top: 20px;
+    padding-left: 40px;
+}
+.arrow{
+    width: auto;
+
+    text-align: end;
+    font-size: 30px;
+}
+.arrow span{
+    padding: 5px 5px;
+    border-radius: 50%;
+    background-color: black;
+    
+}
+.arrow a{
+    text-decoration: none;
+    color: white;
+}
